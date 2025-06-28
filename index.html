@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farhad Warsi | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero-content fade-in" id="home">
+      <img src="my_photo2.jpg" alt="Your Photo" class="profile-pic" />
+      <h1>Hello, I'm <span>Farhad Warsi</span></h1>
+      <p>Frontend Developer | Java programmer</p>
+      <a href="my_CV.pdf" download class="btn">Download Resume</a>
+    </section>
+  </header>
+
+  <section id="about" class="about glass-card" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I am a passionate web developer with a strong background in building responsive and interactive websites. I specialize in frontend technologies such as HTML, CSS, JavaScript, and React.</p>
+
+    <h3>🎓 Education</h3>
+    <ul>
+      <li>B.Tech in Electronics and Communication, Institute of Engineering and Management (2026)</li>
+      <li>Intermediate, Guru Gobind Singh Public School (2022)</li>
+      <li>Matriculation, St.Joseph's School (2020)</li>
+    </ul>
+
+    <h3>💼 Experience</h3>
+    <ul>
+      <li>Frontend Developer Intern at Prodigy Infotech</li>
+      <li>Java Programming Intern at Codsoft</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects glass-card" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project neu">
+        <h3>Spotify Clone</h3>
+        <p>Developed a Spotify Clone with real-time music streaming, playlist management, and responsive UI using modern frontend frameworks and music APIs.</p>
+      </div>
+      <div class="project neu">
+        <h3>Weather App</h3>
+        <p>Created a Weather App that fetches live weather data from public APIs, featuring real-time updates and location-based forecasts.</p>
+      </div>
+      <div class="project neu">
+        <h3>UPI Fraud Detection</h3>
+        <p>Designed a UPI Fraud Detection system leveraging Convolutional Neural Networks (CNN) to accurately classify and detect fraudulent transactions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact glass-card" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>Email: farhadwarsi7@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/farhad-warsi-187131258" target="_blank">My LinkedIn</a></p>
+    <p>GitHub: <a href="https://github.com/Farhadwarsi" target="_blank">My GitHub</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Farhad Warsi. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    AOS.init();
+
+    window.addEventListener('scroll', () => {
+      document.body.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
